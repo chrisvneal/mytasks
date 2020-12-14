@@ -1,10 +1,12 @@
 import React from 'react'
 
-function TaskList() {
+function TaskList(props) {
     return (
-        <div className='tasklist'>
-<h1>TaskList</h1>
-        </div>
+        <ul className='tasklist'>
+            {props.tasks.map(task=>(
+                <li key={task.key}>{task.name}</li>
+            ))}
+        </ul>
     )
 }
 
