@@ -1,14 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Links from "./Links";
+import TaskList from "./TaskList";
 
-function OldTasks() {
+function OldTasks(props) {
   return (
     <div>
       <h2>Old Tasks</h2>
+      <TaskList
+        tasks={[
+          {
+            key: 1,
+            name: "get gifts",
+          },
+        ]}
+      />
 
-      <h3>Links</h3>
-      <Link to="/">Home</Link>
-      <Link to="/oldtasks">Old Tasks</Link>
+      <Links />
     </div>
   );
 }
