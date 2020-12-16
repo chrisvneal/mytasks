@@ -1,6 +1,4 @@
 import React from "react";
-import Links from "./Links";
-import Users from "./Users";
 
 function TaskList(props) {
   return (
@@ -12,9 +10,6 @@ function TaskList(props) {
           </li>
         ))}
       </ul>
-
-      <Links />
-      <Users />
     </div>
   );
 }

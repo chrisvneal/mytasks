@@ -1,7 +1,7 @@
 import "./styles.css";
-import TaskList from "./Components/TaskList";
 import OldTasks from "./Components/OldTasks";
 import { Route } from "react-router-dom";
+import Home from "./Components/Home";
 
 const tasks = [
   {
@@ -16,7 +16,7 @@ const tasks = [
 function App() {
   return (
     <div className="App">
-      <Route exact path="/" render={() => <TaskList tasks={tasks} />} />
+      <Route exact path="/" render={() => <Home tasks={tasks} />} />
 
       <Route path="/oldtasks" component={OldTasks} />
     </div>

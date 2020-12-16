@@ -5,6 +5,8 @@ import TaskList from "./TaskList";
 function OldTasks(props) {
   return (
     <div>
+      <Links />
+
       <h2>Old Tasks</h2>
       <TaskList
         tasks={[
@@ -12,10 +14,12 @@ function OldTasks(props) {
             key: 1,
             name: "get gifts",
           },
+          {
+            key: 2,
+            name: "Order Amazon",
+          },
         ]}
       />
-
-      <Links />
     </div>
   );
 }
