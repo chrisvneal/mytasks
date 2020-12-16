@@ -6,7 +6,7 @@ function Links() {
     <div className="links">
       <Link to="/">New Tasks</Link>
 
-      <Link to="/oldtasks">OldTasks</Link>
+      <Link to="/completed">Completed Tasks</Link>
     </div>
   );
 }

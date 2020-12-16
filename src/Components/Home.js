@@ -4,7 +4,7 @@ import Links from "./Links";
 
 function Home(props) {
   return (
-    <div>
+    <div className="Home">
       <Links />
       <h2>New Tasks</h2>
       <TaskList tasks={props.tasks} />
