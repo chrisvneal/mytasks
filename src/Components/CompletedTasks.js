@@ -1,14 +1,16 @@
 import React from "react";
-import Links from "./Links";
+import Header from "./Header";
 import TaskList from "./TaskList";
 
 function CompletedTasks(props) {
   return (
     <div className="completedTasks">
-      <Links />
+      <Header />
 
-      <h2>Completed Tasks</h2>
-      <TaskList tasks={props.tasks} />
+      <div className="container">
+        <h2>Completed Tasks</h2>
+        <TaskList tasks={props.tasks} />
+      </div>
     </div>
   );
 }

@@ -1,13 +1,16 @@
 import React from "react";
 import TaskList from "./TaskList";
-import Links from "./Links";
+import Header from "./Header";
 
 function Home(props) {
   return (
     <div className="Home">
-      <Links />
-      <h2>New Tasks</h2>
-      <TaskList tasks={props.tasks} />
+      <Header />
+
+      <div className="container">
+        <h2>New Tasks</h2>
+        <TaskList tasks={props.tasks} />
+      </div>
     </div>
   );
 }
