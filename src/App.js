@@ -6,12 +6,24 @@ import Home from "./Components/Home";
 import AddTasks from "./Components/AddTasks";
 
 class App extends Component {
+  state = {
+    completed: [
+      {
+        name: "Fake completed tasks",
+        key: 1,
+      },
+    ],
+  };
+
   render() {
     return (
       <div className="App">
         <Route exact path="/" component={Home} />
 
-        <Route path="/completed" component={CompletedTasks} />
+        <Route
+          path="/completed"
+          render={() => <CompletedTasks tasks={this.state.completed} />}
+        />
 
         <Route
           path="/addtasks"

@@ -15,13 +15,6 @@ class Home extends Component {
         key: 2,
       },
     ],
-
-    completedTasks: [
-      {
-        name: "Fake completed tasks",
-        key: 1,
-      },
-    ],
   };
   addTasks = (tasks) => {
     // check all keys in each object of the array
