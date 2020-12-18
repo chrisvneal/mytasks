@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "./Header";
+// import Header from "./Header";
 import serializeForm from "form-serialize";
 
 class AddTasks extends Component {
@@ -16,15 +16,13 @@ class AddTasks extends Component {
   render() {
     return (
       <div className="AddTasks">
-        <Header />
+        {/* <Header /> */}
 
-        <div className="container">
-          <h2>Add Tasks</h2>
-          <form onSubmit={this.handleSubmit} className="addtask-form">
-            <input type="text" name="name" />
-            <button>Add Task</button>
-          </form>
-        </div>
+        <h2>Add Tasks</h2>
+        <form onSubmit={this.handleSubmit} className="addtask-form">
+          <input type="text" name="name" />
+          <button>Add Task</button>
+        </form>
       </div>
     );
   }
