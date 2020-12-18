@@ -7,6 +7,8 @@ function Links() {
       <Link to="/">New Tasks</Link>
 
       <Link to="/completed">Completed Tasks</Link>
+
+      <Link to="/addtasks">Add Tasks</Link>
     </div>
   );
 }

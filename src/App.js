@@ -3,6 +3,7 @@ import { Component } from "react";
 import CompletedTasks from "./Components/CompletedTasks";
 import { Route } from "react-router-dom";
 import Home from "./Components/Home";
+import AddTasks from "./Components/AddTasks";
 
 class App extends Component {
   state = {
@@ -37,6 +38,8 @@ class App extends Component {
           path="/completed"
           render={() => <CompletedTasks tasks={this.state.completedTasks} />}
         />
+
+        <Route path="/addtasks" component={AddTasks} />
       </div>
     );
   }
