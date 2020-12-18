@@ -34,8 +34,7 @@ class Home extends Component {
       tasks: currentState.tasks.concat([tasks]),
     }));
 
-    // document.querySelector(".addtask-form").value = " ";
-    console.log(document.querySelector(".addtask-form").value);
+    document.querySelector(".addtask-form input").value = "";
   };
 
   render() {
