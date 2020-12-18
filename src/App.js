@@ -20,10 +20,16 @@ class App extends Component {
 
     completedTasks: [
       {
-        key: 1,
         name: "Fake completed tasks",
+        key: 1,
       },
     ],
+  };
+
+  addTasks = (tasks) => {
+    this.setState((currentState) => ({
+      tasks: currentState.tasks.concat([tasks]),
+    }));
   };
   render() {
     return (
@@ -39,7 +45,17 @@ class App extends Component {
           render={() => <CompletedTasks tasks={this.state.completedTasks} />}
         />
 
-        <Route path="/addtasks" component={AddTasks} />
+        <Route
+          path="/addtasks"
+          render={({ history }) => (
+            <AddTasks
+              onAddTasks={(tasks) => {
+                this.addTasks(tasks);
+                history.push("/");
+              }}
+            />
+          )}
+        />
       </div>
     );
   }
