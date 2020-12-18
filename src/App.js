@@ -27,6 +27,19 @@ class App extends Component {
   };
 
   addTasks = (tasks) => {
+    // check all keys in each object of the array
+    const taskKeys = [];
+    this.state.tasks.forEach((task) => {
+      taskKeys.push(task.key);
+    });
+
+    // increase highest key number by 1
+    let highestKey = Math.max(...taskKeys);
+    highestKey++;
+
+    // add that number to the current key of the current task
+    tasks.key = highestKey;
+
     this.setState((currentState) => ({
       tasks: currentState.tasks.concat([tasks]),
     }));
