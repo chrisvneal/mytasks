@@ -31,9 +31,16 @@ header {
 .tasklist {
   list-style-type: none;
   margin: 10px 0;
+  // border: 1px solid red;
+  width: 50%;
 
   li {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
+    padding: 10px;
+
+    &:nth-child(odd) {
+      background: #e9edf0;
+    }
   }
 }
 
